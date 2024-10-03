@@ -1,9 +1,11 @@
+import Heading from '../components/heading';
+import heading from '../components/heading'
 export default function HomePage () {
     console.log('[HomePage] rendering');
         return(
         <>
-        <h1>My</h1>
-        <p>only</p>
+        <Heading>My next.js page</Heading>
+        <p>only greatest games</p>
         </>
     );
 }

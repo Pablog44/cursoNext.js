@@ -1,7 +1,9 @@
+import Heading from '../../../components/heading';
+
 export default function HollowPage () {
     return (
         <>
-        <h1>hollow</h1>
+        <Heading>hollow</Heading>
         <p>su reviews</p>
         </>
     );

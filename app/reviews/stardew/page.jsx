@@ -1,7 +1,9 @@
+import Heading from '../../../components/heading';
+
 export default function ReviewsPage () {
     return (
         <>
-        <h1>Stardew</h1>
+        <Heading>Stardew</Heading>
         <p>su reviews</p>
         </>
     );
