@@ -12,7 +12,9 @@ export default async function ReviewsPage () {
         <img src="/stardew-valley.jpg" alt="" 
         with="640" height="360" className='w-1/2 mb-2 rounded-2xl'
         />
-        <article dangerouslySetInnerHTML={{ __html: html }} />
+        <article dangerouslySetInnerHTML={{ __html: html }} 
+        className='max-w-screen-sm prose prose-slate'
+        />
         </>
     );
 }
