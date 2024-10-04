@@ -11,14 +11,14 @@ export default function ReviewsPage () {
                 <img src="/hollow-knight.jpg" alt="" 
                 with="640" height="360" className='rounded-t'
                 />
-                <h2 className="text-center py-1">Hollow Knight</h2></Link>
+                <h2 className="font-orbitron font-semibold text-center py-1">Hollow Knight</h2></Link>
             </li>
             <li className="bg-white hover:bg-orange-800 border rounded shadow hover:shadow-2xl w-80 mt-3">
                 <Link href="/reviews/hollow">
                 <img src="/stardew-valley.jpg" alt="" 
                 with="640" height="360" className='rounded-t'
                 />
-                <h2 className="text-center py-1">Stardew Valley</h2></Link>
+                <h2 className="font-orbitron font-semibold text-center py-1">Stardew Valley</h2></Link>
             </li>
         </ul>
         </>
