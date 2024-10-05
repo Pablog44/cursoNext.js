@@ -2,27 +2,24 @@ import Link from "next/link";
 import Heading from '../../components/heading';
 import { getReviews } from "@/lib/reviews";
 
-export default async function ReviewsPage() {[]
+export default async function ReviewsPage() {
+    []
     const reviews = await getReviews();
-    console.log ('[ReviewsPage] reviews:', reviews)
+
     return (
         <>
             <Heading>Reviews</Heading>
-            <ul className="fex flex-col gap-3 mb-2">
-                <li className="bg-white hover:bg-orange-800 border rounded shadow hover:shadow-2xl w-80 mt-2">
-                    <Link href="/reviews/hollow-knight">
-                        <img src="/hollow-knight.jpg" alt=""
-                            with="640" height="360" className='rounded-t'
-                        />
-                        <h2 className="font-orbitron font-semibold text-center py-1">Hollow Knight</h2></Link>
-                </li>
-                <li className="bg-white hover:bg-orange-800 border rounded shadow hover:shadow-2xl w-80 mt-3">
-                    <Link href="/reviews/stardew-valley">
-                        <img src="/stardew-valley.jpg" alt=""
-                            with="640" height="360" className='rounded-t'
-                        />
-                        <h2 className="font-orbitron font-semibold text-center py-1">Stardew Valley</h2></Link>
-                </li>
+            <ul className="flex flex-row flex-wrap gap-3 mb-2">
+                {reviews.map((review) => (
+                    <li key={review.slug}
+                        className="bg-white hover:bg-orange-800 border rounded shadow hover:shadow-2xl w-80 mt-2">
+                        <Link href={`/reviews/${review.slug}`}>
+                            <img src={review.image} alt=""
+                                with="640" height="360" className='rounded-t'
+                            />
+                            <h2 className="font-orbitron font-semibold text-center py-1">{review.title}</h2></Link>
+                    </li>
+                ))}
             </ul>
         </>
     );
