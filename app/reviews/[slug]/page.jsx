@@ -7,6 +7,13 @@ export async function generateStaticParams() {
     return slugs.map((slug) => ({ slug }));
 }
 
+export async function genereteMetadata({ params: { slug } }) {
+    const review = await getReview(slug);
+    return {
+        title: review.title,
+    };
+}
+
 export default async function ReviewPage({ params: { slug } }) {
     const review = await getReview(slug);
     return (
