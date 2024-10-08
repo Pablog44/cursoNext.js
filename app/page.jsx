@@ -7,7 +7,7 @@ import { title } from 'process';
 
 export default async function HomePage() {
     const review = await getFeaturedReview();
-    console.log('[HomePage] rendering');
+    // console.log('[HomePage] rendering');
     return (
         <>
             <Heading>My next.js page</Heading>

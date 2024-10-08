@@ -3,7 +3,6 @@
 import { useState } from 'react';
 import { LinkIcon } from '@heroicons/react/20/solid';
 
-
 export default function ShareLinkButton() {
     const [clicked, setClicked] = useState(false);
 
@@ -12,7 +11,6 @@ export default function ShareLinkButton() {
         setClicked(true);
         setTimeout(() => setClicked(false), 1500);
     };
-    console.log('[ShareLinkButton] clicked:', clicked);
 
     return (
         <button onClick={handleClick}
